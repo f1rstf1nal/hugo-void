@@ -37,4 +37,6 @@
 
 {{ $css := resources.Get "/css/styles.css"  | minify }}
 <link href="{{ $css.RelPermalink }}" rel="stylesheet">
+{{ $highlight := resources.Get "/css/highlight.css"  | minify }}
+<link href="{{ $highlight.RelPermalink }}" rel="stylesheet">
 </head>
