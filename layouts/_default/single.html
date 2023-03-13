@@ -4,6 +4,9 @@
 <h1>{{ .Title }}</h1>
 {{ partial "metadata.html" . }}
 </div>
+{{ if .Params.tableofcontents }}
+    {{ partial "tableofcontents.html" . }}
+{{ end }}
 {{ .Content }}
 <div class="post-tags">
     <ul class="post-tags">
