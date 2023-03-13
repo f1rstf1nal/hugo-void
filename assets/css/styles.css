@@ -205,6 +205,10 @@ article {
 	max-width: 66%;
 }
 
+.toc {
+	border: 1px solid white;
+	padding: 5px 10px;
+}
 .mobile-nav a {
     padding-right: 25px;
     font-weight: bold;
