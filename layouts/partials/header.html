@@ -1,0 +1,35 @@
+    {{ partial "logo.html" }}
+    
+    <p>Navigation</p>
+    
+    <ul id="nav">
+        {{ range .Site.Menus.main }}
+    <li><a href="{{ .URL }}">
+        {{ if .Pre }}
+        {{ end }}
+        {{ $text := print .Name | safeHTML }}
+        {{ $text }}
+    </a></li>
+    {{ end }}
+    </ul>
+    
+    {{ if site.Params.showSidebarPosts }} 
+    <p>Latest Posts</p>
+    <ul id=nav>
+        {{ range ( where .Site.RegularPages "Type" "posts" | first 3 )}}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{end}}
+    </ul>
+    {{end}}
+
+{{ if site.Params.showSidebarTags }}
+
+   <p>Tags</p>
+   <ul class="post-tags">
+    {{range $name, $taxonomy := .Site.Taxonomies.tags}}
+        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+        <li class="tag"><a href={{ .RelPermalink }} title="All pages with tag {{$name}}">{{$name}}</a>
+        {{end}}
+    {{end}}
+    </ul>
+{{end}}

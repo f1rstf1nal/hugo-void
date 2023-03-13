@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html{{ with site.LanguageCode | default site.Language.Lang }} lang="{{ . }}"{{ end }}>
+    {{- partial "head.html" . -}}
+    <body>
+        <div class="wrapper">
+        <section class="sidebar hide">
+        <header>
+        {{- partial "header.html" . -}}
+        </header>
+        <footer>
+        {{- partial "footer.html" . -}}
+        </footer>
+        </section>
+
+        <section class="content">
+            <div class="unhide">
+            {{ partial "logo.html" }}
+            </div>
+            <div class="unhide mobile-nav">
+            <ul id="nav" class="unhide">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">
+                {{ if .Pre }}
+                {{ end }}
+                {{ $text := print .Name | safeHTML }}
+                {{ $text }}</a></li>
+            {{ end }}
+            </ul>
+            <hr class="unhide">
+        </div>
+        {{- block "main" . }}{{- end }}
+        </section>
+    </div>
+    <div class="unhide">
+    {{- partial "footer.html" . -}}
+    </div>
+    </body>
+</html>

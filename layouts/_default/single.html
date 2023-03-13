@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article>
+<div class="post-heading">
+<h1>{{ .Title }}</h1>
+{{ partial "metadata.html" . }}
+</div>
+{{ .Content }}
+<div class="post-tags">
+    <ul class="post-tags">
+    {{ with .Params.tags }}
+    {{ if site.Params.showposttags }}
+    {{ range . }}
+    {{ $href := print (absURL "tags/") (urlize .) }}
+    <li class="tag"><a href="{{ $href }}">{{ . }}</a></li>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    </div>
+</article>
+{{ end }}

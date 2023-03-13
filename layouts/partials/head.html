@@ -1,0 +1,40 @@
+<head>
+<meta charset="utf-8">
+
+{{ if and .IsHome .Paginator.HasPrev }}
+  <meta name="robots" content="noindex, nofollow, noarchive">
+{{ else if .Params.noindex }}
+  <meta name="robots" content="noindex, noarchive">
+{{ end }}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ with .Description }}
+  <meta name="description" content="{{ . }}">
+{{ else }}
+  {{ if .IsPage }}
+    <meta name="description" content="{{ .Summary }}">
+  {{ else }}
+    {{ with site.Params.description }}
+      <meta name="description" content="{{ . }}">
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<meta name="color-scheme" content="light dark">
+
+<title>
+    {{- if eq .Title site.Title -}}
+      {{ site.Title }}
+    {{- else -}}
+      {{ with .Title }}{{ . }} | {{ end }}{{ site.Title }}
+    {{- end -}}
+  </title>
+
+  <link rel="canonical" href="{{ .Permalink }}">
+
+{{ range .AlternativeOutputFormats }}
+  {{ printf "<link rel=%q type=%q href=%q title=%q>" .Rel .MediaType .RelPermalink site.Title | safeHTML }}
+{{ end }}
+
+{{ $css := resources.Get "/css/styles.css"  | minify }}
+<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+</head>

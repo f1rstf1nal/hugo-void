@@ -1,0 +1,37 @@
+{{ define "load_paginator" }}
+
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ with .Paginate $pages }}{{ end }}
+
+{{ end }}
+
+{{ define "main" }}
+{{if site.Params.enableFrontPage}}
+  {{.Content}}
+{{ end }}
+
+{{ if site.Params.frontPagePosts}}
+  {{ range ( where .Site.RegularPages "Type" "posts" | first 5 ) }}
+    <div class="post-heading">
+    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ partial "metadata.html" . }}
+    </div>
+    <div class="post-tags">
+    <ul class="post-tags">
+    {{ with .Params.tags }}
+    {{ if site.Params.showFrontPagePostTags }}
+    {{ range . }}
+    {{ $href := print (absURL "tags/") (urlize .) }}
+    <li class="tag"><a href="{{ $href }}">{{ . }}</a></li>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    </div>
+      {{ if site.Params.showFrontPagePostsummaries}}
+        <p class="summary">{{ .Summary }}</p>
+        <a href="{{ .RelPermalink }}">Read more...</a>
+      {{end}}
+  {{ end }}
+{{ end }}
+
+{{ end }}

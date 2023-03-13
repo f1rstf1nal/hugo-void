@@ -1,0 +1,29 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ range .Pages.ByPublishDate.Reverse }}
+    <div class="post-heading">
+    {{ if site.Params.showPostListDateLeft}}
+        {{ partial "metadata.html" . }}
+    {{ end }}
+    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ if site.Params.showPostListDateRight }}
+        {{ partial "metadata.html" . }}
+    {{ end }}
+    </div>
+    <div class="post-tags">
+        {{ if site.Params.showPostListTags }}
+    <ul class="post-tags">
+    {{ with .Params.tags }}
+    {{ range . }}
+    {{ $href := print (absURL "tags/") (urlize .) }}
+    <li class="tag"><a href="{{ $href }}">{{ . }}</a></li>
+        {{ end }}
+    {{ end }}
+    {{ end }}
+    </div>
+    {{ if site.Params.showPostListSummaries }}
+        <p class="summary">{{ .Summary }}</p>
+        <a href="{{ .RelPermalink }}">Read more...</a>
+        {{ end }}
+        {{ end }}
+{{ end }}
