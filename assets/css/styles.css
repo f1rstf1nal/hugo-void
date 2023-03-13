@@ -101,26 +101,13 @@ b,strong{
 	font-weight:700
 }
 
-code,kbd,pre,samp{
-	/*color:#c4c4c4;*/
-	color:#00aa55;
-	/*background:#e9e9e9;*/
-	font-family:'Ubuntu Mono', monospace, serif;
-	line-height:0
-}
-
 div.post-heading h1 {
 	display: inline;
 	max-width: 100%;
 	min-width: 60%
 }
 
-pre{
-	border-radius:3px;
-	line-height:1.5rem;
-	padding:0 1.5rem;
-	margin:1.5rem -1.5rem
-}
+
 
 body{
 	color:#ddd;
@@ -243,6 +230,16 @@ article {
 	background:none;
 	color:#fff
 }
+div.highlight > pre {
+  overflow-x: auto;
+  border-top: 0px;
+  padding: 1rem;
+  margin-top: 0px;
+}
+
+.highlight pre {
+	font-size: 12px;
+	}
 @media only screen and (max-width: 780px){ /* Small screen */
     
 	.content {
