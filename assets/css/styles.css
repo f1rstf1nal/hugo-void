@@ -107,8 +107,13 @@ div.post-heading h1 {
 	min-width: 60%
 }
 
+code {
+	color: #00aa55;
+}
 
-
+pre code {
+	color: #ffffff;
+}
 body{
 	color:#ddd;
     max-width: 60rem;
