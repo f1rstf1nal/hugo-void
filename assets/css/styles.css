@@ -55,7 +55,8 @@ a:hover,a:active{
 h1,h2,h3,h4,h5,h6{
 	color:#f8f8f8;
 	line-height:1.2;
-	text-shadow:1px 1px 0 rgba(0,0,0,0.1)
+	text-shadow:1px 1px 0 rgba(0,0,0,0.1);
+	margin-bottom: 15px;
 }
 
 hr {
@@ -66,22 +67,18 @@ hr {
 }
 
 h1{
-	margin:1.07em 0 1.5rem;
 	font-size:2rem
 }
 
 h2{
-	margin: 1.33em 0 0.1em;
 	font-size:1.5rem;
 }
 
 h3{
-	margin:1.8em 0 1.2rem;
 	font-size:1.333rem
 }
 
 h4{
-	margin:2.15em 0 1.1rem;
 	font-size:1.0rem
 }
 
