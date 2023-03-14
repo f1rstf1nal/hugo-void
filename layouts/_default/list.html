@@ -22,7 +22,7 @@
     {{ end }}
     </div>
     {{ if site.Params.showPostListSummaries }}
-        <p class="summary">{{ .Summary }}</p>
+        <p class="summary">{{ .Summary | markdownify }}</p>
         <a href="{{ .RelPermalink }}">Read more...</a>
         {{ end }}
         {{ end }}
