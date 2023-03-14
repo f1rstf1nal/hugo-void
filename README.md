@@ -32,5 +32,9 @@ Send instructions on how to use the feature
 Specify what Content Security Policy directives need to be added if you are embedding external content or scripts.
 If a feature requires unsafe-inline or unsafe-eval or has tracking issues, the request will be rejected.
 
+
+[Add a contact form and publish to github pages]
+](https://fabform.io/a/create-a-static-website-with-contact-form-on-github-pages)
+
 ## Credits:
 This theme is a heavily-inspired Hugo port and enhancement of the [bedrocklinux-website](https://github.com/bedrocklinux/bedrocklinux-website).
