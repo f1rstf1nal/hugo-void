@@ -1,5 +1,10 @@
+    {{if .Site.Params.useLogo }}
     {{ partial "logo.html" }}
-    <p>Navigation</p>
+    {{ else }}
+    <h1 class="site-title">{{ .Site.Title }}</h1>
+    {{end}}
+    
+    <p class="hide">Navigation</p>
     
     <ul id="nav" class="navigation">
         {{ range .Site.Menus.main }}

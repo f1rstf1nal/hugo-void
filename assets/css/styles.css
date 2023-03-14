@@ -181,9 +181,6 @@ article {
   border: 1px solid #00aa55;
   border-radius: 8px;
 }
-.hide {
-    display: initial;
-}
 
 .unhide {
     display: none;
@@ -251,7 +248,9 @@ pre {
 		text-align: center;
 		font-size: 0.9rem;
 	}
-
+	.site-title {
+		text-align: center;
+	}
 	.content {
 		min-width: 100%;
 		max-width: 100%;
@@ -278,6 +277,9 @@ pre {
 		justify-content: space-evenly;
 		align-items: center;
 		padding-top: 10px;
+		padding-bottom: 10px;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
 	}
 
 	header li:first-child {
