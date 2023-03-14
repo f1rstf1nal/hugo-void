@@ -115,6 +115,9 @@ div.post-heading h1 {
 	min-width: 60%
 }
 
+footer {
+	text-align: center;
+}
 code {
 	color: #00aa55;
 }

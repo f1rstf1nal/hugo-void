@@ -1,0 +1,28 @@
+{{ with site.Params.giscus }}
+{{ if site.Params.giscus.enabled}}
+  {{ if $.Type | in site.Params.mainSections | and .repo }}
+  {{ $repoid := .repoid }}
+  {{ $repocategory := .repocategory }}
+  {{ $repocategoryid := .repocategoryid }}
+  {{ $issueterm := .issueterm }}
+  {{ $strict := .strict }}
+  {{ $reactions := .reactions  }}
+  {{ $inputposition := .inputposition  }}
+  {{ $theme := .theme }}
+  {{ $lang := .lang  }}
+  <script src="https://giscus.app/client.js" data-repo="{{ .repo }}" data-repo-id="{{ .repoid }}" data-category="{{ .repocategory }}"
+        data-category-id="{{ .repocategoryid }}"
+        data-mapping="{{ .issueterm }}"
+        data-strict="{{ .strict }}"
+        data-reactions-enabled="{{ .reactions }}"
+        data-emit-metadata="0"
+        data-input-position="{{ .inputposition}}"
+        data-theme="{{ .theme }}"
+        data-lang="{{ .lang }}"
+        crossorigin="anonymous"
+        async>
+</script>
+  <noscript><hr>JavaScript is disabled, you will need to view comments on GitHub <a href="https://github.com/{{ .repo }}/discussions">here</a>.</noscript>
+  {{end}}
+  {{end}}
+{{end}}
