@@ -1,4 +1,5 @@
 # Hugo Void
+![Screenshot of the homepage](/images/homepage.png)
 `hugo-void` is a modern ultra-lightweight, responsive theme for Hugo full of features and built for blogs, portoflios, wikis and writeups.
 
 `hugo-void` works perfectly on any viewing device and has search-engine optimisation, social media tagging and is conflict-free of any strict website security policy. No trackers or ads are supported and there are no scripts by default.
