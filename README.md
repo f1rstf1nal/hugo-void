@@ -9,10 +9,11 @@ Here are the features:
 - Flexbox-based responsive layout
 - Fine-grained configuration
 - No bloated framework, inline styles or javascript by default
+- Comment sections with Giscus
 
 I am currently working on:
 
-- Comment sections with Giscus or Utterances
+- Comment sections with other providers like Utterances
 - RSS feed looks like a normal page
 - Multilingual support (你好!)
 - Math with KaTeX
@@ -20,7 +21,7 @@ I am currently working on:
 - Display language name in code blocks
 - Easy custom CSS support
 - Light theme
-- Documentation and screenshots
+- Documentation
 
 ## Development
 Do you spot any bugs or have features you want to see? Please use the Issue Tracker or create a Pull request with a fix.

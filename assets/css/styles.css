@@ -195,7 +195,6 @@ article {
 }
 
 .sidebar {
-    height: 100vh;
     padding-right: 30px;
     min-width: 30%;
     max-width: 33%;
@@ -212,20 +211,6 @@ article {
 .toc {
 	border: 1px solid white;
 	padding: 5px 10px;
-}
-.mobile-nav a {
-    padding-right: 25px;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.mobile-nav li {
-    display: inline;
-}
-.mobile-nav {
-    min-width: 100%;
-    max-width: 100%;
-    display: block;
 }
 
 #nav{
@@ -266,15 +251,6 @@ pre {
 		text-align: center;
 		font-size: 0.9rem;
 	}
-	.mobile-nav > ul {
-		padding: 5px 5px;
-		border-top: 1px solid white;
-		border-bottom: 1px solid white;
-		display: flex;
-		flex-direction: row;
-    	align-items: center;
-    	justify-content: space-between;
-	}
 
 	.content {
 		min-width: 100%;
@@ -287,13 +263,27 @@ pre {
         display: initial;
     }
     .wrapper {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .sidebar {
         min-width: 100%;
+		max-height: 100%;
         padding-right: 0px;
-        order: -1;
+		position: inherit;
     }
+
+	.navigation {
+		display:flex;  
+		list-style:none;
+		justify-content: space-evenly;
+		align-items: center;
+		padding-top: 10px;
+	}
+
+	header li:first-child {
+		padding-top: 0px;
+	}
+
     section {
         width:100%;
       }
@@ -301,7 +291,6 @@ pre {
 @media (max-width: 500px){
 
 	#logo{
-	
 	text-align: center;
 	}
 }

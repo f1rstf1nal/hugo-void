@@ -3,38 +3,24 @@
     {{- partial "head.html" . -}}
     <body>
         <div class="wrapper">
-        <section class="sidebar hide">
+        <section class="sidebar">
         <header>
         {{- partial "header.html" . -}}
         </header>
+        <div class="hide">
         <footer>
         {{- partial "footer.html" . -}}
         </footer>
+    </div>
         </section>
-
         <section class="content">
-            <div class="unhide">
-            {{ partial "logo.html" }}
-            </div>
-            <div class="unhide mobile-nav">
-            <ul id="nav" class="unhide">
-            {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}">
-                {{ if .Pre }}
-                {{ end }}
-                {{ $text := print .Name | safeHTML }}
-                {{ $text }}</a></li>
-            {{ end }}
-            </ul>
-            <hr class="unhide">
-        </div>
         {{- block "main" . }}{{- end }}
         </section>
     </div>
     <div class="unhide">
     <footer>
     {{- partial "footer.html" . -}}
-    </footer>
+    </footer>f
     </div>
     </body>
 </html>

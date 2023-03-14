@@ -1,8 +1,7 @@
     {{ partial "logo.html" }}
-    
     <p>Navigation</p>
     
-    <ul id="nav">
+    <ul id="nav" class="navigation">
         {{ range .Site.Menus.main }}
     <li><a href="{{ .URL }}">
         {{ if .Pre }}
@@ -14,16 +13,18 @@
     </ul>
     
     {{ if site.Params.showSidebarPosts }} 
+    <div class="hide">
     <p>Latest Posts</p>
     <ul id=nav>
         {{ range ( where .Site.RegularPages "Type" "posts" | first 3 )}}
         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{end}}
     </ul>
+    </div>
     {{end}}
 
 {{ if site.Params.showSidebarTags }}
-
+   <div class="hide">
    <p>Tags</p>
    <ul class="post-tags">
     {{range $name, $taxonomy := .Site.Taxonomies.tags}}
@@ -32,4 +33,5 @@
         {{end}}
     {{end}}
     </ul>
+</hide>
 {{end}}
