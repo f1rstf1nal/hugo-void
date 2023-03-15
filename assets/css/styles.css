@@ -32,34 +32,6 @@ img{
 	height: 100%;
 	object-fit: contain;
 }
-/* Selection colors */
-::-moz-selection {
-	color: black;
-	background-color: rgba(255,255,255,0.99);
-}
-
-::selection {
-	color: black;
-	background-color: rgba(255,255,255,0.99);
-}
-
-.logo ::selection {
-    color: rgba(255,255,255);
-    background-color: rgba(255,255,255,0);
-}
-
-a:link,a:visited{
-	color:#268bd2;
-	text-decoration:none
-}
-a:focus{
-	color:#ddd;
-	outline:thin dotted
-}
-a:hover,a:active{
-	color:#ddd;
-	outline:0
-}
 
 h1,h2,h3,h4,h5,h6{
 	color:#f8f8f8;
@@ -89,6 +61,14 @@ h3{
 
 h4{
 	font-size:1.0rem
+}
+
+blockquote {
+	border-left: 5px solid #00aa55;
+	margin: 8px;
+	padding: 1em;
+	background-color: #202020;
+	line-height: 1rem;
 }
 
 /* I don't like extra margin on ul,ol */
@@ -159,6 +139,7 @@ article {
 	display: block;
 	list-style:none;
 	margin: -15px 0 15px 0;
+	line-height: 30px;
 }
 .sidebar .post-tags {
 	margin-top: 10px;
@@ -172,18 +153,19 @@ article {
 .post-tags li {
 	display: inline;
 	margin-right: 12px;
+	padding-bottom: 5px;
 }
 
 .post-heading h3 a {
 	color: #ddd;
 }
 
-.tag a {
+.tag a, .tag a:link, .tag a:visited {
   padding-top: 2px;
   text-decoration: none;
   font-weight: bold;
   color: #00aa55;
-  padding: 2px 6px 2px 6px;
+  padding: 2px 6px;
   border: 1px solid #00aa55;
   border-radius: 8px;
 }
@@ -375,4 +357,32 @@ pre {
 	::-webkit-scrollbar {
 		width: 5px;
 	}
+}
+/* Selection colors */
+::-moz-selection {
+	color: black;
+	background-color: rgba(255,255,255,0.99);
+}
+
+::selection {
+	color: black;
+	background-color: rgba(255,255,255,0.99);
+}
+
+.logo ::selection {
+    color: rgba(255,255,255);
+    background-color: rgba(255,255,255,0);
+}
+
+a:link,a:visited{
+	color:#268bd2;
+	text-decoration:none
+}
+a:focus{
+	color:#ddd;
+	outline:thin dotted
+}
+a:hover,a:active{
+	color:#ddd;
+	outline:0
 }
