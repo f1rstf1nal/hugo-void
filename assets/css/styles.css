@@ -17,11 +17,13 @@ body{
 }
 
 aside {
-	flex: 1 0 18rem;
+	flex: 0 0 18rem;
 	top: 0;
 	bottom: 0;
 	min-width: 18rem;
 	width: 18rem;
+	max-width: 18rem;
+	padding: 0rem 2rem 2rem;
 	overflow-x: hidden;
 	overflow-y: auto;
 	position: fixed;
@@ -121,9 +123,6 @@ header li:first-child {
     padding-top: 10px;
 }
 
-article {
-	min-width: 100%
-}
 .post-heading {
 	display: flex;
     flex-wrap: wrap;
@@ -182,15 +181,15 @@ article {
 .flex {
     display: flex;
 	align-items: flex-start;
-	justify-content: center;
+	justify-content: space-between;
 	flex-direction: row;
 	column-gap: -50px;
 }
 
 .left {
-    padding-right: 30px;
 	position: sticky;
 	order: 0;
+	flex-grow: 0;
 }
 
 .content {
@@ -243,12 +242,13 @@ pre {
 	}
 
 
-@media only screen and (max-width: 780px){ /* Small screen */
+@media only screen and (max-width: 956px){ /* Small screen */
     
 	#logo{
 		text-align: center;
 		font-size: 0.9rem;
 	}
+	
 	.flex {
 		flex-direction: column;
 	}
@@ -259,6 +259,11 @@ pre {
 	.content {
 		min-width: 100%;
 		max-width: 100%;
+	}
+
+	article {
+		margin-left: 5rem;
+		margin-right: 5rem;
 	}
 	.hide {
         display: none;
@@ -272,10 +277,10 @@ pre {
     .sidebar {
         flex: 0 0 200px;
 		min-width: 100%;
-        padding-right: 0px;
 		position: initial;
 		padding-bottom: -20px;
 		overflow-y: hidden;
+		padding: 0;
     }
 	.right {
 		display: none;

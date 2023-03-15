@@ -1,6 +1,5 @@
 {{ define "main" }}
-<main>
-    <article>
+<article>
     <div class="post-heading">
         <h1>{{ .Title }}</h1>
         {{ partial "metadata.html" . }}
@@ -20,7 +19,6 @@
     {{ end }}
     {{ end }}
     </div>
+    {{ partial "comments/giscus.html" . }}
 </article>
-</main>
-{{ partial "comments/giscus.html" . }}
 {{ end }}
