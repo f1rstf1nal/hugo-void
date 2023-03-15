@@ -2,24 +2,30 @@
 <html{{ with site.LanguageCode | default site.Language.Lang }} lang="{{ . }}"{{ end }}>
     {{- partial "head.html" . -}}
     <body>
-        <div class="wrapper">
-        <section class="sidebar">
+        <div class="container flex">
+        <aside class="sidebar left">
         <header>
         {{- partial "header.html" . -}}
         </header>
         <div class="hide">
-        <footer>
-        {{- partial "footer.html" . -}}
-        </footer>
-    </div>
-        </section>
-        <section class="content">
+            <footer>
+                {{- partial "footer.html" . -}}
+            </footer>
+        </div>
+</aside>
+        <main class="content">
         {{- block "main" . }}{{- end }}
-        </section>
+        </main>
+        <aside class="right">
+        </aside>
     </div>
     <div class="unhide">
-    <footer>
-    {{- partial "footer.html" . -}}
+        <footer>
+            {{- partial "footer.html" . -}}
+        </footer>
+    </div>
+</aside>
+<footer>
     </footer>
     </div>
     </body>

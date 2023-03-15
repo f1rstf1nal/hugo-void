@@ -1,14 +1,15 @@
 {{ define "main" }}
-<article>
-<div class="post-heading">
-<h1>{{ .Title }}</h1>
-{{ partial "metadata.html" . }}
-</div>
-{{ if .Params.tableofcontents }}
-    {{ partial "tableofcontents.html" . }}
-{{ end }}
-{{ .Content }}
-<div class="post-tags">
+<main>
+    <article>
+    <div class="post-heading">
+        <h1>{{ .Title }}</h1>
+        {{ partial "metadata.html" . }}
+        </div>
+        {{ if .Params.tableofcontents }}
+            {{ partial "tableofcontents.html" . }}
+        {{ end }}
+    {{ .Content }}
+    <div class="post-tags">
     <ul class="post-tags">
     {{ with .Params.tags }}
     {{ if site.Params.showposttags }}
@@ -20,5 +21,6 @@
     {{ end }}
     </div>
 </article>
+</main>
 {{ partial "comments/giscus.html" . }}
 {{ end }}

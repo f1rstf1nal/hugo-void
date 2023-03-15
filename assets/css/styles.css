@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html{
@@ -13,11 +13,19 @@ html{
 
 body{
 	color:#ddd;
-    max-width: 61rem;
-	padding: 0 1.5rem;
-	margin:0 auto;
 	line-height:1.5rem
 }
+
+aside {
+	flex: 1 0 18rem;
+	top: 0;
+	bottom: 0;
+	min-width: 18rem;
+	width: 18rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: fixed;
+	}
 
 img{
 	max-width:100%;
@@ -183,25 +191,40 @@ article {
     display: none;
 }
 
-
-.wrapper {
+.container {
+    margin: 0 auto;
+	max-width: 100rem;
+}
+.flex {
     display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: row;
+	column-gap: -50px;
 }
 
-.sidebar {
+.left {
     padding-right: 30px;
-    min-width: 30%;
-    max-width: 33%;
 	position: sticky;
-	top: 0;
+	order: 0;
 }
 
 .content {
 	display: block;
-	min-width: 66%;
-	max-width: 66%;
+	max-width: 60rem;
+	width: 60rem;
+    flex-grow: 1;
+	order: 1;
 }
 
+.right {
+	order: 2;
+	position: sticky;
+	max-width: 18rem;
+	flex-shrink: 2;
+	width: 18rem;
+	min-width: 0;
+}
 .toc {
 	border: 1px solid white;
 	padding: 5px 10px;
@@ -239,12 +262,17 @@ pre {
 		font-size: 1.1vw;
 	}
 }
+
 @media only screen and (max-width: 780px){ /* Small screen */
     
 	#logo{
 		text-align: center;
 		font-size: 0.9rem;
 	}
+	.flex {
+		flex-direction: column;
+	}
+	
 	.site-title {
 		text-align: center;
 	}
@@ -262,10 +290,11 @@ pre {
         flex-direction: column;
     }
     .sidebar {
-        min-width: 100%;
-		max-height: 100%;
+        flex: 0 0 200px;
+		min-width: 100%;
         padding-right: 0px;
-		position: inherit;
+		position: initial;
+		padding-bottom: -20px;
     }
 
 	.navigation {
@@ -282,10 +311,6 @@ pre {
 	header li:first-child {
 		padding-top: 0px;
 	}
-
-    section {
-        width:100%;
-      }
 }
 @media (max-width: 500px){
 
@@ -306,10 +331,11 @@ pre {
 	}
 }
 
-header{
+/* header{
 	overflow: auto;
 	overflow-x: hidden;
 }
+*/
 
 @media only screen and (min-width: 80em){
 }
