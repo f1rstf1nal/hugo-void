@@ -104,6 +104,7 @@ div.post-heading h1 {
 footer {
 	text-align: center;
 }
+
 code {
 	color: #00aa55;
 }
@@ -241,10 +242,6 @@ pre {
 	font-size: 12px;
 	}
 
-@media (max-width: 1090px){
-	#logo{
-	}
-}
 
 @media only screen and (max-width: 780px){ /* Small screen */
     
@@ -316,16 +313,6 @@ pre {
 		margin-top:1.5rem
 	}
 }
-
-/* header{
-	overflow: auto;
-	overflow-x: hidden;
-}
-*/
-
-@media only screen and (min-width: 80em){
-}
-
 
 * {
 	scrollbar-width: thin;
