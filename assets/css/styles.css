@@ -247,8 +247,11 @@ pre {
 	#logo{
 		text-align: center;
 		font-size: 0.9rem;
+		margin-top: -10px;
 	}
-	
+	#nav {
+		margin-top: 15px;
+	}
 	.flex {
 		flex-direction: column;
 	}
@@ -256,9 +259,10 @@ pre {
 	.site-title {
 		text-align: center;
 	}
+
 	.content {
 		min-width: 100%;
-		max-width: 100%;
+		max-width: 1%;
 	}
 
 	article {
@@ -275,10 +279,9 @@ pre {
         flex-direction: column;
     }
     .sidebar {
-        flex: 0 0 200px;
+        flex: 0 0;
 		min-width: 100%;
 		position: initial;
-		padding-bottom: -20px;
 		overflow-y: hidden;
 		padding: 0;
     }
