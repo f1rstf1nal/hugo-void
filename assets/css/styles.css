@@ -381,3 +381,29 @@ a:hover,a:active{
 	color:#ddd;
 	outline:0
 }
+
+.notice {
+	display: block;
+	padding: 1rem;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	border: 1px solid white;
+  }
+  
+.alert {
+	border: 1px solid #fc5f5f;
+  }
+  
+  .info {
+	border: 1px solid #85a6d6;
+  }
+  
+  .success {
+	border: 1px solid #a8daa8;
+  }
+  
+  .warning {
+	border: 1px solid #ddb785;
+  }
