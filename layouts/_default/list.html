@@ -13,13 +13,10 @@
     <div class="post-tags">
         {{ if site.Params.showPostListTags }}
     <ul class="post-tags">
-    {{ with .Params.tags }}
-    {{ range . }}
-    {{ $href := print (absURL "tags/") (urlize .) }}
-    <li class="tag"><a href="{{ $href }}">{{ . }}</a></li>
+        {{ range (.GetTerms "tags") }}
+    <li class="tag"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
-    {{ end }}
-    {{ end }}
+        {{ end }}
     </div>
     {{ if site.Params.showPostListSummaries }}
         <p class="summary">{{ .Summary | markdownify }}</p>
