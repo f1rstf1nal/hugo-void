@@ -67,8 +67,6 @@ blockquote {
 	line-height: 1rem;
 }
 
-/* I don't like extra margin on ul,ol */
-/*p,ul,ol{*/
 p{
 	margin:0 0 1rem 0
 }
