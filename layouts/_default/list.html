@@ -1,6 +1,6 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ range .Pages.ByPublishDate.Reverse }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "posts") }}
+{{ range $paginator.Pages }}
     <div class="post-heading">
     {{ if site.Params.postListDateLeft}}
         {{ partial "metadata.html" . }}
@@ -23,4 +23,5 @@
         <a href="{{ .RelPermalink }}">Read more...</a>
         {{ end }}
         {{ end }}
+        {{ template "_internal/pagination.html" . }}
 {{ end }}

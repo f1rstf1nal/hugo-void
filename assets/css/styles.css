@@ -3,7 +3,6 @@
 }
 
 html{
-	background:#141414;
 	font-family:'Open Sans', sans-serif;
 	-webkit-text-size-adjust:100%;
 	-ms-text-size-adjust:100%;
@@ -12,7 +11,6 @@ html{
 }
 
 body{
-	color:#ddd;
 	line-height:1.5rem
 }
 
@@ -36,16 +34,12 @@ img{
 }
 
 h1,h2,h3,h4,h5,h6{
-	color:#f8f8f8;
 	line-height:1.2;
-	text-shadow:1px 1px 0 rgba(0,0,0,0.1);
 	margin-bottom: 15px;
 }
 
 hr {
-    background-color: #eee;
     border: 0 none;
-    color: #eee;
     height: 1px;
 }
 
@@ -93,7 +87,6 @@ time{
 }
 
 b,strong{
-	color:#c4c4c4;
 	font-weight:700
 }
 
@@ -123,6 +116,18 @@ header li:first-child {
     padding-top: 10px;
 }
 
+.pagination {
+	list-style: none;
+	text-align: center;
+}
+
+.page-item {
+	display: inline;
+	border: 1px solid;
+	padding: 5px;
+	margin: 0px 5px;
+	text-align: center;
+}
 .post-heading {
 	display: flex;
     flex-wrap: wrap;
@@ -209,7 +214,7 @@ header li:first-child {
 	min-width: 0;
 }
 .toc {
-	border: 1px solid white;
+	border: 1px solid;
 	padding: 5px 10px;
 }
 
@@ -218,8 +223,7 @@ header li:first-child {
 	clear: both;
 	padding: 5px 10px;
 	margin: 0rem;
-	color: white;
-	border: 1px solid white;
+	border: 1px solid;
   }
   
   details.dropdown-content {
@@ -247,7 +251,7 @@ header li:first-child {
 	font-family:monospace, serif;
 	line-height:1.2;
 	background:none;
-	color:#fff;
+	color: white;
 	text-align: center;
 }
 pre {
@@ -317,8 +321,8 @@ pre {
 		align-items: center;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		border-top: 1px solid white;
-		border-bottom: 1px solid white;
+		border-top: 1px solid ;
+		border-bottom: 1px solid;
 	}
 
 	header li:first-child {
@@ -400,7 +404,7 @@ a:focus{
 	outline:thin dotted
 }
 a:hover,a:active{
-	color:#ddd;
+	color:#ddd; /* change this */
 	outline:0
 }
 
@@ -411,7 +415,7 @@ a:hover,a:active{
 	margin-block-end: 1em;
 	margin-inline-start: 0px;
 	margin-inline-end: 0px;
-	border: 1px solid white;
+	border: 1px solid;
   }
   
 .alert {
@@ -429,3 +433,13 @@ a:hover,a:active{
   .warning {
 	border: 1px solid #ddb785;
   }
+
+@media (prefers-color-scheme: light) {
+.post-heading h3 a {
+	color: black;
+}
+
+#logo>a>pre {
+	color: black;
+}
+}

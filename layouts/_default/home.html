@@ -28,7 +28,7 @@
     {{ end }}
     </div>
       {{ if site.Params.showFrontPagePostsummaries}}
-        <p class="summary">{{ .Summary }}</p>
+        <p class="summary">{{ .Summary | markdownify }}</p>
         <a href="{{ .RelPermalink }}">Read more...</a>
       {{end}}
   {{ end }}
