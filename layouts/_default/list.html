@@ -1,4 +1,13 @@
 {{ define "main" }}
+
+{{  if site.Params.showListContent}}
+{{ .Content }}
+{{ end }}
+
+{{ if site.Params.useSearch }}
+{{ partial "search.html" }}
+{{ end }}
+
 {{ $paginator := .Paginate (where .Data.Pages "Type" "posts") }}
 {{ range $paginator.Pages }}
     <div class="post-heading">

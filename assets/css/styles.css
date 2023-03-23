@@ -284,7 +284,14 @@ pre {
 	.site-title {
 		text-align: center;
 	}
-
+	.post-heading h3 {
+		clear: both;
+		display: block;
+		width: 100%;
+	}
+	.post-heading time {
+		margin-bottom: 15px;
+	}
 	.content {
 		min-width: 100%;
 		max-width: 1%;
@@ -419,20 +426,19 @@ a:hover,a:active{
   }
   
 .alert {
-	border: 1px solid #fc5f5f;
-  }
-  
-  .info {
-	border: 1px solid #85a6d6;
-  }
-  
-  .success {
-	border: 1px solid #a8daa8;
-  }
-  
-  .warning {
-	border: 1px solid #ddb785;
-  }
+	border: 1px solid #fc5f5f;}
+.info {
+	border: 1px solid #85a6d6;}
+.success {
+	border: 1px solid #a8daa8;}
+.warning {
+	border: 1px solid #ddb785;}
+
+.search input {
+	width: 100%;
+	text-align: center;
+	height: 25px;
+}
 
 @media (prefers-color-scheme: light) {
 .post-heading h3 a {
