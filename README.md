@@ -17,10 +17,8 @@ I am currently working on:
 - RSS feed looks like a normal page
 - Multilingual support (你好!)
 - Math with KaTeX
-- Shortcodes for Bandcamp.
 - Display language name in code blocks
 - Easy custom CSS support
-- Light theme
 - Documentation
 
 ## Development

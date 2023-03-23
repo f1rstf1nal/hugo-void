@@ -1,12 +1,15 @@
 {{ define "main" }}
     <div class="post-heading">
         <h1>{{ .Title }}</h1>
+        {{if eq .Section "posts"}}
         {{ partial "metadata.html" . }}
+        {{ end }}
         </div>
         {{ if .Params.tableofcontents }}
             {{ partial "tableofcontents.html" . }}
         {{ end }}
     {{ .Content }}
+    {{if eq .Section "posts"}}
     <div class="post-tags">
     <ul class="post-tags">
     {{ with .Params.tags }}
@@ -18,5 +21,6 @@
     {{ end }}
     {{ end }}
     </div>
+    {{ end }}
     {{ partial "comments/giscus.html" . }}
 {{ end }}
