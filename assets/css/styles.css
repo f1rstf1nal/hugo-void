@@ -123,8 +123,7 @@ header li:first-child {
 	display: inline;
 	border: 1px solid;
 	padding: 5px;
-	margin: 0px 5px;
-	text-align: center;
+	margin: 5px 5px;
 }
 .post-heading {
 	display: flex;
@@ -210,6 +209,9 @@ header li:first-child {
 	flex-shrink: 2;
 	width: 18rem;
 	min-width: 0;
+}
+details {
+	margin-bottom: 1.6em;
 }
 .toc {
 	border: 1px solid;
