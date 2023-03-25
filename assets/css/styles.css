@@ -413,14 +413,14 @@ pre {
 
 a:link,a:visited{
 	color:#268bd2;
-	text-decoration:none
+	text-decoration: none;
 }
 a:focus{
-	color:#ddd;
-	outline:thin dotted
+	color:#ff0000;
+	outline: thin dotted;
 }
 a:hover,a:active{
-	color:#ddd; /* change this */
+	color:#ff0000;
 	outline:0
 }
 
