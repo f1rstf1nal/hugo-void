@@ -21,7 +21,7 @@
     <div class="hide">
     <p>Latest Posts</p>
     <ul id=nav>
-        {{ range ( where .Site.RegularPages "Type" "posts" | first 3 )}}
+        {{ range ( where .Site.RegularPages "Type" "post" | first 3 )}}
         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{end}}
     </ul>

@@ -1,7 +1,7 @@
 {{ define "main" }}
     <div class="post-heading">
         <h1>{{ .Title }}</h1>
-        {{if eq .Section "posts"}}
+        {{if eq .Section "post"}}
         {{ partial "metadata.html" . }}
         {{ end }}
         </div>
@@ -9,7 +9,7 @@
             {{ partial "tableofcontents.html" . }}
         {{ end }}
     {{ .Content }}
-    {{if eq .Section "posts"}}
+    {{if eq .Section "post"}}
     <div class="post-tags">
     <ul class="post-tags">
     {{ with .Params.tags }}
