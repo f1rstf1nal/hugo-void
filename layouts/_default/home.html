@@ -12,7 +12,7 @@
 
 {{ if site.Params.frontPagePosts}}
 <hr>
-  {{ range ( where .Site.RegularPages "Type" "post" | first 1 ) }}
+  {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections | first 1 ) }}
     <div class="post-heading">
     <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     {{ partial "metadata.html" . }}

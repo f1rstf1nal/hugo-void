@@ -8,8 +8,7 @@
 {{ partial "search.html" }}
 {{ end }}
 
-{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-{{ range $paginator.Pages }}
+{{ range .Paginator.Pages }}
     <div class="post-heading">
     {{ if site.Params.postListDateLeft}}
         {{ partial "metadata.html" . }}
