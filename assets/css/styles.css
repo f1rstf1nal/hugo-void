@@ -202,7 +202,7 @@ a.title {
 
 .container {
     margin: 0 auto;
-	max-width: 100rem;
+	max-width: 85rem;
 }
 .flex {
     display: flex;
