@@ -22,5 +22,8 @@
     {{ end }}
     </div>
     {{ end }}
+    {{ if site.Params.showmessage }}
+    {{ partial "message.html" }}
+    {{ end }}
     {{ partial "comments/giscus.html" . }}
 {{ end }}

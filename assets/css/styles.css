@@ -33,22 +33,6 @@ img {
 	object-fit: contain;
 }
 
-/* Selection colors */
-::-moz-selection {
-	color: black;
-	background-color: rgba(255,255,255,0.99);
-}
-
-::selection {
-	color: black;
-	background-color: rgba(255,255,255,0.99);
-}
-
-.logo ::selection {
-    color: rgba(255,255,255);
-    background-color: rgba(255,255,255,0);
-}
-
 a:link,a:visited{
 	color: #5EC6E8;
 	text-decoration: underline;
