@@ -16,11 +16,11 @@
     {{ end }}
     <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     {{ if site.Params.postListDateRight }}
-        {{ partial "metadata.html" . }}
-    {{ end }}
+        <span>Posted on: {{ partial "metadata.html" . }}</span>
+        {{ end }}
         {{ if site.Params.showPostListTags }}
     <div class="post-tags">
-        <ul>
+        <ul> Tags: 
         {{ range (.GetTerms "tags") }}
     <li class="tag"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}

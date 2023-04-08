@@ -34,7 +34,7 @@
    <ul class="post-tags">
     {{range $name, $taxonomy := .Site.Taxonomies.tags}}
         {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-        <li class="tag"><a href={{ .RelPermalink }} title="All pages with tag {{$name}}">{{$name}}</a>
+        <li class="tag"><a href={{ .RelPermalink }} title="All pages with tag {{$name}}">{{$name}}</a></li>
         {{end}}
     {{end}}
     </ul>
