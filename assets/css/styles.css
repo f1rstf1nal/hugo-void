@@ -122,10 +122,7 @@ header li:first-child {
     padding-top: 10px;
 }
 
-header.list-content {
-	padding-left: 1rem;
-	padding-right: 1rem;
-}
+
 .pagination {
 	list-style: none;
 	text-align: center;
@@ -299,6 +296,11 @@ pre {
 	
 	.site-title {
 		text-align: center;
+	}
+	
+	header.list-content {
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 
 	.post-summary h3 {
