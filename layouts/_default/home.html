@@ -4,21 +4,21 @@
   {{ with .Paginate $pages }}{{ end }}
 
 {{ end }}
-
 {{ define "main" }}
 {{if site.Params.enableFrontPage}}
+<section class="post">
   {{.Content}}
+</section>
 {{ end }}
 
 {{ if site.Params.frontPagePosts}}
 <hr>
+<section class="post">
   {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections | first 1 ) }}
-    <div class="post-heading">
     <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     {{ partial "metadata.html" . }}
-    </div>
     <div class="post-tags">
-    <ul class="post-tags">
+    <ul>
     {{ with .Params.tags }}
     {{ if site.Params.showFrontPagePostTags }}
     {{ range . }}
@@ -33,6 +33,6 @@
         <a href="{{ .RelPermalink }}">Read more...</a>
       {{end}}
   {{ end }}
-{{ end }}
-
+  {{ end }}
+    </section>  
 {{ end }}

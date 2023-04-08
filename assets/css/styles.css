@@ -87,7 +87,7 @@ ul ul,ol ol{
 	padding:0 0 0 1.5rem
 }
 
-time{
+time {
 	font-style:italic;
 }
 
@@ -95,9 +95,8 @@ b,strong{
 	font-weight:700
 }
 
-div.post-heading h1 {
+div.post-summary h1 {
 	display: inline;
-	max-width: 100%;
 	min-width: 60%
 }
 
@@ -123,6 +122,10 @@ header li:first-child {
     padding-top: 10px;
 }
 
+header.list-content {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
 .pagination {
 	list-style: none;
 	text-align: center;
@@ -134,18 +137,11 @@ header li:first-child {
 	padding: 5px;
 	margin: 5px 5px;
 }
-.post-heading {
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
+.post-summary {
 	min-width: 100%;
 	max-width: 100%;
 }
 
-.summary {
-	display: block;
-}
 .post-tags {
 	display: block;
 	list-style:none;
@@ -305,12 +301,12 @@ pre {
 		text-align: center;
 	}
 
-	.post-heading h3 {
+	.post-summary h3 {
 		clear: both;
 		display: block;
 		width: 100%;
 	}
-	.post-heading time {
+	.post-summary time {
 		margin-bottom: 15px;
 	}
 	.content {
@@ -318,10 +314,11 @@ pre {
 		max-width: 1%;
 	}
 
-	article {
+	.post {
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
+
 	.hide {
         display: none;
     }
@@ -434,7 +431,7 @@ pre {
 }
 
 @media (prefers-color-scheme: light) {
-.post-heading h3 a {
+.post-summary h3 a {
 }
 
 #logo>a>pre {

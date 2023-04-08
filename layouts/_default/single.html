@@ -1,10 +1,9 @@
 {{ define "main" }}
-    <div class="post-heading">
+<article class="post">
         <h1>{{ .Title }}</h1>
         {{ if $.Type | in site.Params.mainSections }}
-            {{ partial "metadata.html" . }}
+            {{ partial "metadata.html" . }} on <a href="{{ .Site.BaseURL }}"> {{ .Site.Title }}</a>
         {{ end }}
-        </div>
         {{ if .Params.tableofcontents }}
             {{ partial "tableofcontents.html" . }}
         {{ end }}
@@ -26,4 +25,5 @@
     {{ partial "message.html" }}
     {{ end }}
     {{ partial "comments/giscus.html" . }}
+</article>
 {{ end }}

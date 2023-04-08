@@ -1,5 +1,5 @@
 {{ define "main" }}
-
+<header class="list-content">
 {{  if site.Params.showListContent}}
 {{ .Content }}
 {{ end }}
@@ -7,9 +7,10 @@
 {{ if site.Params.useSearch }}
 {{ partial "search.html" }}
 {{ end }}
-
+</header>
+<section class="post">
 {{ range .Paginator.Pages }}
-    <div class="post-heading">
+<article class="post-summary">
     {{ if site.Params.postListDateLeft}}
         {{ partial "metadata.html" . }}
     {{ end }}
@@ -17,19 +18,21 @@
     {{ if site.Params.postListDateRight }}
         {{ partial "metadata.html" . }}
     {{ end }}
-    </div>
-    <div class="post-tags">
         {{ if site.Params.showPostListTags }}
-    <ul class="post-tags">
+    <div class="post-tags">
+        <ul>
         {{ range (.GetTerms "tags") }}
     <li class="tag"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
+    </ul>
         {{ end }}
-    </div>
+
     {{ if site.Params.showPostListSummaries }}
         <p class="summary">{{ .Summary | markdownify }}</p>
         <a href="{{ .RelPermalink }}">Read more...</a>
         {{ end }}
+    </article>
         {{ end }}
         {{ template "_internal/pagination.html" . }}
+    </section>
 {{ end }}
