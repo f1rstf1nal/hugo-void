@@ -23,12 +23,7 @@
 <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
-{{- if .IsHome -}}
- <meta name="description" content="{{ site.Params.Description }}" />
-{{- else -}}
- <meta name="description" content="{{ .Params.Description }}" />
-{{- end }}
-
+<meta name="description" content="{{ .Params.description }}" />
 <title>
     {{- if eq .Title site.Title -}}
       {{ site.Title }}
