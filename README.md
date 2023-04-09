@@ -6,20 +6,30 @@
 
 Here are the features:
 
-- Flexbox-based responsive layout
+- Flexbox-based responsive sidebar layout
+- Accessible code written with semantic elements
 - Fine-grained configuration
 - No bloated framework, inline styles or javascript by default
-- Comment sections with Giscus
+- Comment sections with Giscus (optional)
 
-I am currently working on:
+Other features:
+- 100 Accessibility, speed and SEO score on Lighthouse (requires SEO to be properly configured yourself)
+- No conflicts with strict security policies (optional features may vary)
+- Support on *all* modern, common platforms and *almost all* niche platforms.
+- Shortcodes for details boxes, notices, abbreviations, music from Bandcamp and much more
 
+Possible future features:
 - Comment sections with other providers like Utterances
-- RSS feed looks like a normal page
-- Multilingual support (你好!)
+- Multilingual support (你好!) - Could be working already, not tested
 - Math with KaTeX
 - Display language name in code blocks
 - Easy custom CSS support
 - Documentation
+
+## Website theme in use
+This theme was developed as the one for use on the [firstfinal.net](https://firstfinal.net/) website.
+
+I will make an example site eventually.
 
 ## Development
 Do you spot any bugs or have features you want to see? Please use the Issue Tracker or create a Pull request with a fix.
