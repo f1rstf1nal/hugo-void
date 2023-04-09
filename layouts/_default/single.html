@@ -21,8 +21,10 @@
     {{ end }}
     </div>
     {{ end }}
+    {{ if $.Type | in site.Params.mainSections }}
     {{ if site.Params.showmessage }}
     {{ partial "message.html" }}
+    {{ end }}
     {{ end }}
     {{ partial "comments/giscus.html" . }}
 </article>
