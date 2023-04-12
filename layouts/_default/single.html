@@ -2,7 +2,7 @@
 <article class="post">
         <h1>{{ .Title }}</h1>
         {{ if $.Type | in site.Params.mainSections }}
-            {{ partial "metadata.html" . }} on <a href="{{ .Site.BaseURL }}"> {{ .Site.Title }}</a>
+            <span class="post-date">{{ partial "metadata.html" . }} on <a href="{{ .Site.BaseURL }}"> {{ .Site.Title }}</a></span>
         {{ end }}
         {{ if .Params.tableofcontents }}
             {{ partial "tableofcontents.html" . }}
