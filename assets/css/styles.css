@@ -111,7 +111,7 @@ footer {
 }
 
 code {
-	color: #00aa55;
+	color: #00B803;
 	font-size: 1rem;
 }
 
@@ -471,6 +471,10 @@ pre {
 
 a:link, a:visited {
 	color: #015979;
+}
+
+code {
+	color: #940025;
 }
 
 a:hover {
