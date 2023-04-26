@@ -12,7 +12,6 @@
 {{ end }}
 
 {{ if site.Params.frontPagePosts}}
-<hr>
 <section class="post">
   {{ range ( where site.RegularPages "Type" "in" site.Params.mainSections | first 1 ) }}
     <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
