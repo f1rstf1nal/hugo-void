@@ -30,6 +30,7 @@ aside {
 img {
 	margin: auto;
 	display: block;
+	max-width: 100%;
 }
 
 a:link,a:visited{
